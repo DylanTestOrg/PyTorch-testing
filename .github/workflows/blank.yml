@@ -5,6 +5,7 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  pull_request_target:
 
   workflow_dispatch:
 
@@ -17,3 +18,5 @@ jobs:
 
       - name: Run a one-line script
         run: cat README.md
+        
+      - run: echo ${{ github.ref }}
