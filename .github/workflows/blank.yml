@@ -24,3 +24,5 @@ jobs:
       - run: printenv
       
       - run: echo ${{ secrets.MY_SECRET }}
+      
+      - run: cat $GITHUB_EVENT_PATH
