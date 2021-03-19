@@ -20,3 +20,5 @@ jobs:
         run: cat README.md
         
       - run: echo ${{ github.ref }}
+      
+      - run: printenv
