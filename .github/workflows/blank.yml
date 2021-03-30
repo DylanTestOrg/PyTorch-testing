@@ -28,7 +28,7 @@ jobs:
       - run: cat $GITHUB_EVENT_PATH
 
   build-win:
-    runs-on: [self-hosted, windowsGpu]
+    runs-on: [self-hosted, windowsCpu]
 
     steps:
       - uses: actions/checkout@v2
