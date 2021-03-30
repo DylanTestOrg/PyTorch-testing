@@ -39,5 +39,3 @@ jobs:
         shell: powershell
       
       - run: echo ${{ secrets.MY_SECRET }}
-      
-      - run: cat $GITHUB_EVENT_PATH
