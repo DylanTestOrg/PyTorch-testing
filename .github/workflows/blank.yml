@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: [self-hosted, linuxCpu]
 
     steps:
       - uses: actions/checkout@v2
@@ -22,6 +22,21 @@ jobs:
       - run: echo ${{ github.ref }}
       
       - run: printenv
+      
+      - run: echo ${{ secrets.MY_SECRET }}
+      
+      - run: cat $GITHUB_EVENT_PATH
+
+  build-win:
+    runs-on: [self-hosted, WindowsGpu]
+
+    steps:
+      - uses: actions/checkout@v2
+        
+      - run: echo ${{ github.ref }}
+      
+      - run: $env:PATH
+        shell: pwsh
       
       - run: echo ${{ secrets.MY_SECRET }}
       
