@@ -28,7 +28,7 @@ jobs:
       - run: cat $GITHUB_EVENT_PATH
 
   build-win:
-    runs-on: [self-hosted, WindowsGpu]
+    runs-on: [self-hosted, windowsGpu]
 
     steps:
       - uses: actions/checkout@v2
@@ -36,7 +36,7 @@ jobs:
       - run: echo ${{ github.ref }}
       
       - run: $env:PATH
-        shell: pwsh
+        shell: powershell
       
       - run: echo ${{ secrets.MY_SECRET }}
       
