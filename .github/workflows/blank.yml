@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: [self-hosted, linuxCpu]
+    runs-on: [self-hosted, linux.2xlarge]
 
     steps:
       - uses: actions/checkout@v2
@@ -28,7 +28,7 @@ jobs:
       - run: cat $GITHUB_EVENT_PATH
 
   build-win:
-    runs-on: [self-hosted, windowsCpu]
+    runs-on: [self-hosted, win.2xlarge]
 
     steps:
       - uses: actions/checkout@v2
